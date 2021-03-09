@@ -1,0 +1,4 @@
+Background-color: #510b34;
+player-color: #ffffff;
+enimies color: #ff3a44;
+score-color: #ab798f;

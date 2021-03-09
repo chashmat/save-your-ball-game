@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body *, body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+body {
+    background-color: #0b3251;
+    color: ivory;
+    height: 100vh;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+/* h1 animination and styling */
+
+h1 {
+    font-weight: 400;
+    transform: translateY(-450%);
+}
+
+h1:nth-child(1) {
+    animation: animination-h1-1 1.75s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s 1 normal none;
+}
+
+@keyframes animination-h1-1 {
+    0% {
+        font-weight: 900;
+        color: #333333;
+        transform: translateY(602%);
+    }
+    50% {
+        font-weight: 400;
+        color: #fffff0;
+        transform: translateY(0%);
+    }
+    100% {
+        font-weight: 400;
+        color: #fffff0;
+        transform: translateY(-450%);
+    }
+}
+
+h1:nth-child(2) {
+    margin-left: 10px;
+    animation: animination-h1-2 1.75s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s 1 normal none;
+    transform: translateX(0%) translateY(-450%);
+}
+
+@keyframes animination-h1-2 {
+    0% {
+        font-weight: 900;
+        color: #333333;
+        transform: translateX(175%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        font-weight: 400;
+        color: #fffff0;
+        transform: translateY(-450%);
+    }
+}
+
+/* .game-container animination and styling */
+
+.game-container {
+    height: 370px;
+    width: 740px;
+    margin-top: 40px;
+    background: #510b34;
+    position: absolute;
+    z-index: 1;
+    border: 6px solid #0b4851;
+    animation: animination-game-container 1.75s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s 1 normal none;
+}
+
+@keyframes animination-game-container {
+    0% {
+        left: -100%;
+        z-index: -1;
+    }
+    100% {
+        left: 10%;
+        z-index: -1;
+    }
+}
+
+/* scores styling */
+
+.score h2 {
+    position: absolute;
+    top: 0px;
+    color: #ab798f;
+}
+
+.current.score h2 {
+    left: 10%;
+}
+
+.hi.score h2 {
+    right: 10%;
+}
+
+.score h2 span {
+    font-size: 27px;
+}
+
+/* player styling */
+
+.player {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background: #fffff0;
+    position: fixed;
+    transition: 0s;
+}
+
+/* enimes styling */
+
+.enimies {
+    position: absolute;
+}
+
+.enimies.one {
+    top: 75px;
+    left: 215px;
+}
+
+.enimies.two {
+    top: 150px;
+    left: 140px;
+}
+
+.enimies.three {
+    top: 200px;
+    left: 215px;
+}
+
+/* enimes body styling */
+
+.enimies .body {
+    height: 30px;
+    width: 30px;
+    background: #ff3a44;
+}
+
+.enimies .body::after {
+    content: '';
+    position: relative;
+    background: #e2e2e2;
+    height: 10px;
+    width: 10px;
+    right: -5px;
+    top: -5px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+/* enimes mouth styling */
+
+.enimies .mouth {
+    height: 17px;
+    width: 17px;
+    background: #ff3a44;
+    z-index: -2;
+    transform: translateX(-8px) rotate(45deg);
+}
